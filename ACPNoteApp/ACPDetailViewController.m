@@ -152,8 +152,7 @@
     CLLocation *location = [locations lastObject];
     
     self.location = location.coordinate;
-    NSLog(@"%f , %f", self.location.latitude, self.location.longitude);
-    
+
     [self.locationManager stopMonitoringSignificantLocationChanges];
 }
 
