@@ -7,6 +7,7 @@
 //
 
 #import "ACPDetailViewController.h"
+#import "ACPNote.h"
 
 
 @interface ACPDetailViewController ()
@@ -80,8 +81,10 @@
     self.noteDescription.editable = NO;
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editView:)];
     self.navigationItem.rightBarButtonItem = rightButton;
- //   [self.detailItem setNoteDescription:self.noteDescription.text];
-    [self.detailItem setTitle:self.noteTitle.text];
+
+    ACPNote *note = self.detailItem;
+    [note setNoteDescription:self.noteDescription.text];
+    [note setTitle:self.noteTitle.text];
     
     
 }

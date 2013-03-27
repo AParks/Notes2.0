@@ -112,18 +112,15 @@
     double lat = srcViewController.location.latitude;
     double lon = srcViewController.location.longitude;
     [self insertNewObject:lat lon:lon title:title description: description];
-
-  
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        ACPDetailViewController *destViewController = segue.destinationViewController;
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        NSLog(@"%d", indexPath.row);
-        [[segue destinationViewController] setDetailItem:object];
-        NSLog(@"yoo");
-
+        [destViewController setDetailItem:object];
+        destViewController.showDetail = YES;
     }
     else if ([[segue identifier] isEqualToString:@"addNote"]) {
         ACPDetailViewController *destViewController = segue.destinationViewController;

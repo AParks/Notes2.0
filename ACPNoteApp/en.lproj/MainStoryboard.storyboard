@@ -79,7 +79,7 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DEy-6C-OLe">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="191" id="55V-ap-Ogr"/>
+                                    <constraint firstAttribute="height" constant="166" id="hMi-3l-Pwh"/>
                                 </constraints>
                             </mapView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vJO-dh-Qic">
@@ -89,7 +89,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zoa-DB-nbk">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="209" id="aWO-uR-kph"/>
+                                    <constraint firstAttribute="height" constant="164" id="ddT-A2-WXE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -97,13 +97,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DEy-6C-OLe" firstAttribute="leading" secondItem="22" secondAttribute="leading" type="default" id="F4F-K5-xPa"/>
+                            <constraint firstAttribute="bottom" secondItem="DEy-6C-OLe" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="7E8-px-veU"/>
                             <constraint firstItem="zoa-DB-nbk" firstAttribute="top" secondItem="vJO-dh-Qic" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HUu-dp-mfU"/>
-                            <constraint firstItem="DEy-6C-OLe" firstAttribute="bottom" secondItem="22" secondAttribute="bottom" type="default" id="cKV-G5-IJD"/>
+                            <constraint firstItem="DEy-6C-OLe" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="KeR-hQ-4ZX"/>
+                            <constraint firstAttribute="trailing" secondItem="DEy-6C-OLe" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="aXR-nG-Zbd"/>
                             <constraint firstAttribute="trailing" secondItem="zoa-DB-nbk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dAd-yU-acO"/>
                             <constraint firstItem="vJO-dh-Qic" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="iht-3I-cba"/>
                             <constraint firstItem="zoa-DB-nbk" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kXw-MZ-QmC"/>
-                            <constraint firstItem="DEy-6C-OLe" firstAttribute="trailing" secondItem="22" secondAttribute="trailing" type="default" id="lbN-eU-ZqS"/>
                             <constraint firstItem="vJO-dh-Qic" firstAttribute="top" secondItem="22" secondAttribute="top" constant="20" symbolic="YES" type="default" id="qVB-O4-eqR"/>
                             <constraint firstAttribute="trailing" secondItem="vJO-dh-Qic" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vWn-Ig-sgV"/>
                         </constraints>
@@ -127,6 +127,30 @@
             <point key="canvasLocation" x="902" y="64"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="ACPDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ACPDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="dismissView:"/>
+                <relationship kind="action" name="editView:"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="noteDescription" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="noteTitle" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ACPMasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ACPMasterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="unwindFromDetail:" candidateClass="UIStoryboardSegue"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UIStoryboardSegue" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
