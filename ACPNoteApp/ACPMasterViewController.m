@@ -46,8 +46,6 @@
     [newManagedObject setValue:[NSNumber numberWithDouble:lon]  forKey:@"longitude"];
     [newManagedObject setValue:description forKey:@"noteDescription"];
     [newManagedObject setValue:title forKey:@"title"];
-
-
     
     // Save the context.
     NSError *error = nil;
@@ -108,8 +106,13 @@
 }
 
 - (IBAction)unwindFromDetail:(UIStoryboardSegue *)segue {
-    //ACPDetailViewController *srcViewController = segue.sourceViewController;
-   // [self insertNewObject]
+    ACPDetailViewController *srcViewController = segue.sourceViewController;
+    NSString *title = srcViewController.noteTitle.text;
+    NSString *description = srcViewController.noteDescription.text;
+    double lat = srcViewController.location.latitude;
+    double lon = srcViewController.location.longitude;
+    [self insertNewObject:lat lon:lon title:title description: description];
+
   
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -117,7 +120,10 @@
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        NSLog(@"%d", indexPath.row);
         [[segue destinationViewController] setDetailItem:object];
+        NSLog(@"yoo");
+
     }
     else if ([[segue identifier] isEqualToString:@"addNote"]) {
         ACPDetailViewController *destViewController = segue.destinationViewController;
@@ -229,7 +235,7 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    cell.textLabel.text = [object valueForKey:@"title"];
 }
 
 @end

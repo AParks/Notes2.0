@@ -42,8 +42,8 @@
         self.noteTitle.text = [self.detailItem valueForKey:@"title"];
         self.noteDescription.textColor = [UIColor blackColor];
         self.noteDescription.text = [self.detailItem valueForKey:@"noteDescription"];
-        double lat = [self.detailItem doubleForKey:@"latitude"];
-        double lon = [self.detailItem doubleForKey:@"longitude"];
+        double lat = [[self.detailItem valueForKey:@"latitude"] doubleValue];
+        double lon = [[self.detailItem valueForKey:@"longitude"] doubleValue];
         self.location = CLLocationCoordinate2DMake(lat, lon);
     }
 }

@@ -24,6 +24,7 @@
 		6FB4E3C51702949700D5F9F8 /* Post-it-note-white-bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FB4E3C41702949700D5F9F8 /* Post-it-note-white-bg.jpg */; };
 		6FB4E3C71702A16900D5F9F8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB4E3C61702A16900D5F9F8 /* MapKit.framework */; };
 		6FB4E3C91702A1DD00D5F9F8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB4E3C81702A1DD00D5F9F8 /* CoreLocation.framework */; };
+		6FB4E3CF1702ACE300D5F9F8 /* ACPNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB4E3CE1702ACE300D5F9F8 /* ACPNote.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		6FB4E3C41702949700D5F9F8 /* Post-it-note-white-bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Post-it-note-white-bg.jpg"; sourceTree = "<group>"; };
 		6FB4E3C61702A16900D5F9F8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6FB4E3C81702A1DD00D5F9F8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6FB4E3CD1702ACE200D5F9F8 /* ACPNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPNote.h; sourceTree = "<group>"; };
+		6FB4E3CE1702ACE300D5F9F8 /* ACPNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPNote.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 				6FB4E3BD1702906800D5F9F8 /* ACPDetailViewController.m */,
 				6FB4E3B61702906700D5F9F8 /* ACPNoteApp.xcdatamodeld */,
 				6FB4E3A21702906700D5F9F8 /* Supporting Files */,
+				6FB4E3CD1702ACE200D5F9F8 /* ACPNote.h */,
+				6FB4E3CE1702ACE300D5F9F8 /* ACPNote.m */,
 			);
 			path = ACPNoteApp;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 				6FB4E3B81702906700D5F9F8 /* ACPNoteApp.xcdatamodeld in Sources */,
 				6FB4E3BB1702906700D5F9F8 /* ACPMasterViewController.m in Sources */,
 				6FB4E3BE1702906800D5F9F8 /* ACPDetailViewController.m in Sources */,
+				6FB4E3CF1702ACE300D5F9F8 /* ACPNote.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
